@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/jackxu/Projects/SourceTreeGit/LaneDetection/Cpp/LaneFilter.cpp">
+			<Option target="Cpp"/>
+		</Unit>
+		<Unit filename="/Users/jackxu/Projects/SourceTreeGit/LaneDetection/Cpp/LaneFilter.h">
+			<Option target="Cpp"/>
+		</Unit>
 		<Unit filename="/Users/jackxu/Projects/SourceTreeGit/LaneDetection/Cpp/main.cpp">
 			<Option target="Cpp"/>
 		</Unit>
