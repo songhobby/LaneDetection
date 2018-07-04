@@ -14,6 +14,5 @@ int main(int argc, char const *argv[]) {
   }
   Mat filtered;
   filtered = LF(InputImage);
-  return 0;
   imwrite("../../TestingImages/OutputImage.png", filtered);
 }

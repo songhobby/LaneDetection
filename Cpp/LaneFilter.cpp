@@ -55,40 +55,12 @@ Mat LaneFilter::operator()(Mat InputImage)
   yellow_filtered = ColorThreshold(HSVfromBGR(InputImage)
     , Scalar(yellow_lower_H, yellow_lower_S, yellow_lower_V)
     , Scalar(yellow_higher_H, yellow_higher_S, yellow_higher_V));
-  Mat channel[1];
+  Mat channel[3];
   split(HLSfromBGR(InputImage), channel);
-  white_filtered = ColorThreshold(channel[2]
+  white_filtered = ColorThreshold(channel[1]
     , Scalar(white_lower_L), Scalar(white_higher_L));
   canny_filtered = EdgeDetection(DeNoise(GrayFromBGR(InputImage)));
   bitwise_xor(yellow_filtered, white_filtered, Mask);
   bitwise_and(Mask, canny_filtered, Mask);
   return Mask;
 }
-//
-// LaneFilter::LaneFilter() {
-//
-// }
-//
-// LaneFilter::~LaneFilter() {
-//
-// }
-//
-// void LaneFilter::CannyGradientFilter() {
-//
-// }
-//
-// void LaneFilter::applyFilter() {
-//
-// }
-//
-// void LaneFilter::hsvFilter() {
-//
-// }
-//
-// void LaneFilter::grayFilter() {
-//
-// }
-//
-// void LaneFilter::Example(int input_, int &out_) {
-//     out_ = input_;
-// }
