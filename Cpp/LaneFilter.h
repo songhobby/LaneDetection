@@ -21,25 +21,25 @@ private:
   bool L2_gradient = false;
 
   //Color Thresholding
-  int yellow_lower_H = 15;
+  int yellow_lower_H = 20;
   int yellow_higher_H = 30;
   int yellow_lower_S = 100;
   int yellow_higher_S = 255;
   int yellow_lower_V = 100;
   int yellow_higher_V = 255;
 
-  int white_lower_L = 100;
+  int white_lower_L = 185;
   int white_higher_L = 255;
 
 public:
-  Mat GrayFromBGR(Mat InputImage);
-  Mat HSVfromBGR(Mat InputImage);
-  Mat HLSfromBGR(Mat InputImage);
-  Mat ColorThreshold(Mat InputImage, Scalar lower, Scalar higher);
-  Mat DeNoise(Mat InputImage);
-  Mat ROI(Mat InputImage);
-  Mat EdgeDetection(Mat InputImage); // Input is in Grey scale
-  Mat operator()(Mat InputImage);
+  Mat GrayFromBGR(const Mat& InputImage);
+  Mat HSVfromBGR(const Mat& InputImage);
+  Mat HLSfromBGR(const Mat& InputImage);
+  Mat ColorThreshold(const Mat& InputImage, Scalar& lower, Scalar& higher);
+  Mat DeNoise(const Mat& InputImage);
+  Mat ROI(const Mat& InputImage);
+  Mat EdgeDetection(const Mat& InputImage); // Input is in Grey scale
+  Mat operator()(const Mat& InputImage);
 };
 
 #endif
