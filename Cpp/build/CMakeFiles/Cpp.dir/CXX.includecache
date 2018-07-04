@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/haobei/LaneDetection/Cpp/LaneFilter.cpp
+LaneFilter.h
+/home/haobei/LaneDetection/Cpp/LaneFilter.h
+
+/home/haobei/LaneDetection/Cpp/LaneFilter.h
+opencv2/opencv.hpp
+-
+
+/home/haobei/LaneDetection/Cpp/main.cpp
+iostream
+-
+LaneFilter.h
+/home/haobei/LaneDetection/Cpp/LaneFilter.h
+opencv2/opencv.hpp
+-
+
